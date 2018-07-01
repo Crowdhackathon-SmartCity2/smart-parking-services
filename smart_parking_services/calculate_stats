@@ -1,0 +1,33 @@
+<?php
+echo "<!DOCTYPE html>\n<html><head>";
+ require_once 'functions.php';
+ //Calculate mean probability
+ $time_taken = queryMysql("Select * from park where ID='1' and taken=1");
+ $num1 =$time_taken->num_rows;
+ $time_free=queryMysql("Select * from park where ID='1' and taken=0");
+ $num2 =$time_free->num_rows;
+ $prob_free=$time_free/($time_taken+$time_free);
+ 
+ 
+ //Calculate mean probability in current time;
+ $time_taken_now= queryMysql("Select * from park where ID='1' and taken=1 and time='".$now."'");
+ $num1 = $time_taken_now->num_rows;
+ $time_free_now=queryMysql("Select * from park where ID='1' and taken=0 and time='".$now."'");
+ $num2 = $time_free_now->num_rows;
+ $prob_free_now=$num2/($num2+$num1);
+ 
+ //Calculate mean parking time
+ $num = $result->num_rows;
+ $mean=0;
+ for ($j = 0 ; $j < $num ; ++$j){
+	 
+	$row = $result->fetch_array(MYSQLI_ASSOC);
+	$id=$row["ID"];
+	$comf= queryMysql("Select timep from park where ID='$id' ");
+	$n = $comf->num_rows;
+	for ($i = 0 ; $i < $n ; ++$i){
+		$mean=$mean+$row["i"];
+	}
+ }
+ $mean=$mean/$num;
+?>

@@ -1,0 +1,35 @@
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY-iVKhcsxabw&callback=initMap">
+    </script>
+<!--<script>
+
+function myMap()
+{
+  myCenter=new google.maps.LatLng(38.899833, 22.433572);
+  myCenter2=new google.maps.LatLng(38.899759, 22.434290);
+  myCenter3=new google.maps.LatLng(38.899738, 22.434005);
+  var mapOptions= {
+    center:myCenter,
+    zoom:19, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+  //var image2="http://www.comune.arezzo.it/il-comune/suap-e-attivita-economiche/01_notizie/avvisi-pubblico-per-titoli-finalizzato-all2019assegnazione-di-postazioni-per-attrazioni-dello-spettacolo-viaggiante-nel-triennio-2018-2019-2020/image";
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  var marker2 = new google.maps.Marker({
+    position: myCenter2,
+    //icon :image2
+  });
+  var marker3 = new google.maps.Marker({
+    position: myCenter3,
+   
+  });
+  marker.setMap(map);
+  marker2.setMap(map);
+  marker3.setMap(map);
+}
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>-->
